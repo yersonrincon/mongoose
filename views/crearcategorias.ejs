@@ -1,0 +1,65 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<form  id ="form"action="" method="POST">
+    <div class="container mt4">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">NOMBRE</label>
+            <input type="text" class="form-control" id="" name="nombre" tabindex="1">
+        </div>
+        <!--   <div class="md-3">
+        <label for="validationCustom04" class="form-label">Estado</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Elige...</option>
+          <option>TRUE</option>
+          <option>FALSE</option>
+        </select>
+        <div class="invalid-feedback">
+          Selecciona un estado válido.
+        </div>
+      </div>
+
+-->
+        <div class="mb-3">
+            <label for="nombre" class="form-label">GENERO</label>
+            <select id="estado" name="estado" class="form-select" tabindex="2">
+                <option value="true" selected>ACTIVO</option>
+                <option value="false">INACTIVO</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+      </form>
+</div>
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.has('success') && urlParams.get('success')){
+    Swal.fire({
+  title: "categoria creada ",
+  icon: "success",
+  button: "Okay",
+  }).then(()=>{
+        console.log(window.location.hostname)
+    window.location.replace(window.location.origin + '/');
+
+    })
+}
+</script>
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.has('categoria') && urlParams.get('categoria')){
+    Swal.fire({
+  title: "categoria creada ",
+  icon: "success",
+  button: "Okay",
+  }).then(()=>{
+        console.log(window.location.hostname)
+    window.location.replace(window.location.origin + '/');
+
+    })
+}
+</script>
